@@ -657,6 +657,10 @@ section {
   transition: ease-in-out 0.3s;
 }
 
+#services a {
+  color: #111;
+}
+
 .services .icon-box p {
   line-height: 24px;
   font-size: 14px;
@@ -1031,7 +1035,7 @@ section {
 .features .icon-box {
   display: flex;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
   background: #fff;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   transition: ease-in-out 0.3s;
@@ -1054,10 +1058,18 @@ section {
 .features .icon-box h3 a {
   color: #111;
   transition: ease-in-out 0.3s;
+  text-align: right;
 }
 
 .features .icon-box h3 a:hover {
   color: #8ac756;
+}
+
+
+.featured-product-img {
+  max-height: 62px;
+  max-width: 50%;
+  padding-right: .5rem!important;
 }
 
 /*--------------------------------------------------------------
@@ -2240,4 +2252,14 @@ section {
   background: #8ac756;
   color: #fff;
   text-decoration: none;
+}
+
+
+.btn-primary {
+  background: #8ac756;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 4px;
 }

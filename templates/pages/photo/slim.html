@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+  
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Photo Novelty</h2>
+          <ol>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'catalogue' %}">Catalogue</a></li>
+            <li><a href="{% url 'photo_novelty' %}">Photo Novelty</a></li>
+            <li>Slim Booth</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container" data-aos="fade-up">
+        <div class="portfolio-details-container">
+
+          <div class="owl-carousel portfolio-details-carousel">
+            <img src="{% static 'img/services/slimbooth.jpg' %}" class="img-fluid" alt="">
+            <!-- <img src="{% static 'img/services/infinite2.jpg' %}" class="img-fluid" alt="">
+            <img src="{% static 'img/services/infinite3.jpg' %}"class="img-fluid" alt=""> -->
+          </div>
+
+          <div class="portfolio-info">
+            <h3>Product Information</h3>
+            <ul>
+              <li><strong>Category</strong>: Photo Booth</li>
+              <li><strong>Item</strong>: Slim Booth</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="portfolio-description">
+          <h2>The Slim Booth</h2>
+          <p>
+            The Slim Booth is one of the sleakest booths in our inventory. With a built in camera mount it takes HD pictures with a DSLR camera and has a large 42" touch screen. Guests can choose from a 3 shot template or full page single shot right from the interactive touch screen.
+            From the large touchscreen guests can choose to text, email and/or print thier photos. Customized branding available!
+          </p>
+          <div class="text-center">
+            <a href="{% url 'home' %}#contact" class="btn btn-primary">Request Info</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+
+
+{% endblock content %}

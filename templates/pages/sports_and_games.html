@@ -1,0 +1,181 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+  
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Sports & Games</h2>
+          <ol>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'catalogue' %}">Catalogue</a></li>
+            <li>Sports & Games</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-sports">Sports</li>
+              <li data-filter=".filter-games">Games</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-sports">
+            <a href="{% url 'led_foosball' %}">
+                <img src="{% static 'img/services/20playerfoos.jpg' %}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                <h4>20 Player Foosball</h4>
+                <p>Sports</p>
+                <a href="{% url 'led_foosball' %}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-games">
+            <a href="{% url 'game_cube' %}">
+                <img src="{% static 'img/slide/gamecube.png' %}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                <h4>Game Cube</h4>
+                <p>Games</p>
+                <a href="{% url 'game_cube' %}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-sports">
+            <a href="{% url 'led_street_hoops' %}">
+            <img src="{% static 'img/services/streethoops1.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>LED Street Hoops</h4>
+              <p>Sports</p>
+              <a href="{% url 'led_street_hoops' %}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+            </a>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-games">
+            <a href="{% url 'led_ping_pong' %}">
+            <img src="{% static 'img/services/ledpingpong.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>LED Ping Pong</h4>
+              <p>Games</p>
+              <a href="{% url 'led_ping_pong' %}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+            </a>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-sports">
+            <a href="{% url 'virtual_sports' %}">
+            <img src="{% static 'img/services/virtualsports2.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Virtual Sports Arena</h4>
+              <p>Sports</p>
+              <a href="{% url 'virtual_sports' %}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+            </a>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-sports">
+            <a href="portfolio-details.html">
+            <img src="{% static 'img/services/graffitibooth1.png' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Chic Hoops</h4>
+              <p>Sports</p>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+            </a>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-games">
+            <a href="{% url 'led_air_hockey' %}">
+                <img src="{% static 'img/services/ledairhockey.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>LED Air Hockey</h4>
+              <p>Games</p>
+              <a href="{% url 'led_air_hockey' %}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+            </a>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-sports">
+            <a href="{% url 'popashot' %}">
+                <img src="{% static 'img/services/popashot1.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Pop-a-Shot</h4>
+              <p>Sports</p>
+              <a href="{% url 'popashot' %}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+            </a>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-sports">
+            <a href="{% url 'football_toss' %}">
+                <img src="{% static 'img/services/footballtoss.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Football Toss</h4>
+              <p>Sports</p>
+              <a href="{% url 'football_toss' %}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-sports">
+            <a href="{% url 'bubble_soccer' %}">
+                <img src="{% static 'img/services/bubblesoccer.png' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Bubble Soccer</h4>
+              <p>Sports</p>
+              <a href="{% url 'bubble_soccer' %}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-sports">
+            <a href="{% url 'bubble_soccer' %}">
+                <img src="{% static 'img/services/bubblehockey.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Bubble Hockey</h4>
+              <p>Sports</p>
+              <a href="{% url 'bubble_soccer' %}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-games">
+            <a href="{% url 'led_air_hockey' %}">
+                <img src="{% static 'img/services/airhockey.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Air Hockey</h4>
+              <p>Games</p>
+              <a href="{% url 'led_air_hockey' %}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+            </a>
+          </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-games">
+          <a href="{% url 'casino' %}">
+              <img src="{% static 'img/services/casino.jpg' %}" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>Casino</h4>
+            <p>Games</p>
+            <a href="{% url 'casino' %}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+          </div>
+          </a>
+        </div>
+      </div>
+      </div>
+    </section><!-- End Portfolio Section -->
+
+  </main><!-- End #main -->
+
+{% endblock content %}

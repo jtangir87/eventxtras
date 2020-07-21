@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+  
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Photo Novelty</h2>
+          <ol>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'catalogue' %}">Catalogue</a></li>
+            <li><a href="{% url 'photo_novelty' %}">Photo Novelty</a></li>
+            <li>Ring Booth</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container" data-aos="fade-up">
+        <div class="portfolio-details-container">
+
+          <div class="owl-carousel portfolio-details-carousel">
+            <img src="{% static 'img/services/ringbooth.jpg' %}" class="img-fluid" alt="">
+            <!-- <img src="{% static 'img/services/infinite2.jpg' %}" class="img-fluid" alt="">
+            <img src="{% static 'img/services/infinite3.jpg' %}"class="img-fluid" alt=""> -->
+          </div>
+
+          <div class="portfolio-info">
+            <h3>Product Information</h3>
+            <ul>
+              <li><strong>Category</strong>: Photo Booth</li>
+              <li><strong>Item</strong>: Ring Booth</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="portfolio-description">
+          <h2>The Ring Booth</h2>
+          <p>
+            The Ring Booth is a flexible option for multi-room events. It has a beautiful and sleek stand that detaches and can be carried around the venue by the attendant. 
+            Digital props, custom overlay, GIFs, Boomerang and still images included. Prints are sent wirelessly to the high-speed printer and guests can text and email themselves their photo right from the booth!
+          </p>
+          <div class="text-center">
+            <a href="{% url 'home' %}#contact" class="btn btn-primary">Request Info</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+
+
+{% endblock content %}

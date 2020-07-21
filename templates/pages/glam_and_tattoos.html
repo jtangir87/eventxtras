@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+  
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Photo Novelty</h2>
+          <ol>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'catalogue' %}">Catalogue</a></li>
+            <li>Glam & Tattoos</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-glam">Glam</li>
+              <li data-filter=".filter-tattoos">Tattoos</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-glam">
+            <a href="{% url 'infinite_booth' %}">
+                <img src="{% static 'img/services/glitterbar1.jpg' %}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                <h4>Glitter Bar</h4>
+                <p>Glam</p>
+                <a href="{% url 'infinite_booth' %}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+            </a>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-tattoos">
+            <a href="{% url 'ring_booth' %}">
+            <img src="{% static 'img/services/getinked.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Get Inked</h4>
+              <p>Tattoos</p>
+              <a href="{% url 'ring_booth' %}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+            </a>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-glam">
+            <a href="{% url 'swing_booth' %}">
+            <img src="{% static 'img/services/chokerbar1.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>LED Choker Bar</h4>
+              <p>Glam</p>
+              <a href="{% url 'swing_booth' %}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+            </a>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-glam filter-tattoos">
+            <a href="{% url 'slim_booth' %}">
+            <img src="{% static 'img/services/flashtattoos1.png' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Flash Tattoos</h4>
+              <p>Glam</p>
+              <a href="{% url 'slim_booth' %}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+            </a>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-glam filter-tattoos">
+            <a href="{% url 'photo_cube' %}">
+            <img src="{% static 'img/services/glittertattoos1.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Glitter Tattoos</h4>
+              <p>Glam</p>
+              <a href="{% url 'photo_cube' %}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+  </main><!-- End #main -->
+
+{% endblock content %}
