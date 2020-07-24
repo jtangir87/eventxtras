@@ -44,7 +44,7 @@ urlpatterns = [
     path('catalogue/photo-novelty/tapsnap-studio', TemplateView.as_view(template_name="pages/photo/tapsnap_studio.html"), name="tapsnap_studio"),
 
     # SPORTS & GAMES #
-    path('catalogue/sports-and-games/20-player-foosball', TemplateView.as_view(template_name="pages/sports_games/ledfoosbal.html"), name="led_foosball"),
+    path('catalogue/sports-and-games/20-player-foosball', TemplateView.as_view(template_name="pages/sports_games/ledfoosball.html"), name="led_foosball"),
     path('catalogue/sports-and-games/game-cube', TemplateView.as_view(template_name="pages/sports_games/game_cube.html"), name="game_cube"),
     path('catalogue/sports-and-games/led-street-hoops', TemplateView.as_view(template_name="pages/sports_games/ledstreethoops.html"), name="led_street_hoops"),
     path('catalogue/sports-and-games/led-ping-pong', TemplateView.as_view(template_name="pages/sports_games/ledpingpong.html"), name="led_ping_pong"),
