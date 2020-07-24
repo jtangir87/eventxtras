@@ -7,8 +7,14 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Event Xtras | Modern Party Additions</title>
-  <meta content="" name="descriptison">
-  <meta content="" name="keywords">
+  <meta content="The industry leader in private event add-ons and enhancements. Photo booths, sports games, glam bars, apparel, and more!" name="description">
+  <meta content="Photo booth rental, Mitzvah add ons, party add ons, private event services" name="keywords">
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.event-xtras.com" />
+  <meta property="og:title" content="Event Xtras" />
+  <meta property="og:description" content="The industry leader in private event add-ons and enhancements. Photo booths, sports games, glam bars, apparel, and more!" />
+  <meta property="og:image" content="{% static 'og-img.png' %}" />
 
   <!-- Favicons -->
   <link href="{% static 'img/favicon.png' %}" rel="icon">
@@ -60,10 +66,8 @@
       </nav><!-- .nav-menu -->
 
       <div class="header-social-links">
-        <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
         <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
         <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="icofont-linkedin"></i></i></a>
       </div>
 
     </div>
@@ -86,8 +90,8 @@
               14051 Townsend Rd <br>
               Philadelphia, PA 19154<br>
               <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@eventxtras.net<br>
+              <strong>Phone:</strong> <a href="tel:2153029902">(215)302-9902</a><br>
+              <strong>Email:</strong> <a href="mailto:info@event-xtras.com">info@event-xtras.com</a><br>
             </p>
           </div>
 
@@ -105,12 +109,12 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Services</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Photo Novelty</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Sports & Games</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Glam & Tattoos</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Tailgate Style</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Apparel</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Fun Foods</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'photo_novelty' %}">Photo Novelty</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'sports_and_games' %}">Sports & Games</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'glam_and_tattoos' %}">Glam & Tattoos</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'tailgate' %}">Tailgate Style</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'apparel' %}">Apparel</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'fun_foods' %}">Fun Foods</a></li>
             </ul>
           </div>
 
@@ -135,11 +139,8 @@
         
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
         <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
         <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
       </div>
     </div>
   </footer><!-- End Footer -->
@@ -160,7 +161,11 @@
 
   <!-- Template Main JS File -->
   <script src="{% static 'js/main.js' %}"></script>
-
+  {% block footscript %}
+    
+  {% endblock footscript %}
 </body>
+
+
 
 </html>

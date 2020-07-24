@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+  
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Apparel</h2>
+          <ol>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'catalogue' %}">Catalogue</a></li>
+            <li>Apparel</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+
+        <div class="row portfolio-container" data-aos="fade-up">
+
+          <div class="col-lg-4 col-md-6 portfolio-item">
+            <a href="{% url 'live_ink' %}">
+                <img src="{% static 'img/services/liveink.jpg' %}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                <h4>Live Ink</h4>
+                <a href="{% url 'live_ink' %}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+            </a>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item">
+            <a href="{% url 'airbrush' %}">
+            <img src="{% static 'img/services/airbrush.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Airbrush Artist</h4>
+              <a href="{% url 'airbrush' %}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+  </main><!-- End #main -->
+
+{% endblock content %}

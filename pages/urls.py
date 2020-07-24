@@ -16,6 +16,7 @@ Including another URLconf
 
 from django.urls import path
 from django.views.generic import TemplateView
+from pages.views import contact_us
 
 urlpatterns = [
     path('', TemplateView.as_view(template_name="pages/home.html"), name="home"),
@@ -23,6 +24,11 @@ urlpatterns = [
     path('catalogue/photo-novelty', TemplateView.as_view(template_name="pages/photonovelty.html"), name="photo_novelty"),
     path('catalogue/sports-and-games', TemplateView.as_view(template_name="pages/sports_and_games.html"), name="sports_and_games"),
     path('catalogue/glam-and-tattoos', TemplateView.as_view(template_name="pages/glam_and_tattoos.html"), name="glam_and_tattoos"),
+    path('catalogue/tailgate', TemplateView.as_view(template_name="pages/tailgate.html"), name="tailgate"),
+    path('catalogue/apparel', TemplateView.as_view(template_name="pages/apparel.html"), name="apparel"),
+    path('catalogue/fun-foods', TemplateView.as_view(template_name="pages/fun_foods.html"), name="fun_foods"),
+
+    path('contact', contact_us, name="contact_us"),
 
 
     ## SERVICE DETAILS ##
@@ -50,6 +56,26 @@ urlpatterns = [
     path('catalogue/sports-and-games/bubble-soccer', TemplateView.as_view(template_name="pages/sports_games/bubblesoccer.html"), name="bubble_soccer"),
     path('catalogue/sports-and-games/casino', TemplateView.as_view(template_name="pages/sports_games/casino.html"), name="casino"),
 
+    # GLAM & TATTOOS #
+    path('catalogue/glam-and-tattoos/glitter-bar', TemplateView.as_view(template_name="pages/glam_and_tats/glitterbar.html"), name="glitter_bar"),
+    path('catalogue/glam-and-tattoos/get-inked', TemplateView.as_view(template_name="pages/glam_and_tats/getinked.html"), name="get_inked"),
+    path('catalogue/glam-and-tattoos/choker-bar', TemplateView.as_view(template_name="pages/glam_and_tats/chokerbar.html"), name="choker_bar"),
+    path('catalogue/glam-and-tattoos/flash-tattoos', TemplateView.as_view(template_name="pages/glam_and_tats/flashtattoos.html"), name="flash_tattoos"),
+    path('catalogue/glam-and-tattoos/glitter-tattoos', TemplateView.as_view(template_name="pages/glam_and_tats/glittertattoos.html"), name="glitter_tattoos"),
+
+    # TAILGATE #
+    path('catalogue/tailgate/led-corn-hole', TemplateView.as_view(template_name="pages/tailgate/ledcornhole.html"), name="led_corn_hole"),
+    path('catalogue/tailgate/giant-jenga', TemplateView.as_view(template_name="pages/tailgate/giantjenga.html"), name="giant_jenga"),
+
+    # APPAREL #
+    path('catalogue/apparel/live-ink', TemplateView.as_view(template_name="pages/apparel/liveink.html"), name="live_ink"),
+    path('catalogue/apparel/airbrush', TemplateView.as_view(template_name="pages/apparel/airbrush.html"), name="airbrush"),
+
+    # FUN FOODS #
+    path('catalogue/fun-foods/donut-wall', TemplateView.as_view(template_name="pages/fun_foods/donutwall.html"), name="donut_wall"),
+    path('catalogue/fun-foods/candy-bar', TemplateView.as_view(template_name="pages/fun_foods/candybar.html"), name="candy_bar"),
+    path('catalogue/fun-foods/popcorn', TemplateView.as_view(template_name="pages/fun_foods/popcorn.html"), name="popcorn"),
+    path('catalogue/fun-foods/cotton-candy', TemplateView.as_view(template_name="pages/fun_foods/cottoncandy.html"), name="cotton_candy"),
 
 
 ]

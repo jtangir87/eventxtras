@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+  
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Glam & Tattoos</h2>
+          <ol>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'catalogue' %}">Catalogue</a></li>
+            <li><a href="{% url 'glam_and_tattoos' %}">Glam & Tattoos</a></li>
+            <li>Flash Tattoos</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container" data-aos="fade-up">
+        <div class="portfolio-details-container">
+
+          <div class="owl-carousel portfolio-details-carousel">
+            <img src="{% static 'img/services/flashtattoos1.png' %}" class="img-fluid" alt="">
+            <img src="{% static 'img/services/flashtattoos2.jpg' %}" class="img-fluid" alt="">
+            <!-- <img src="{% static 'img/services/infinite3.jpg' %}"class="img-fluid" alt=""> -->
+          </div>
+
+          <div class="portfolio-info">
+            <h3>Product Information</h3>
+            <ul>
+              <li><strong>Category</strong>: Tattoos/li>
+              <li><strong>Item</strong>: Flash Tattoos</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="portfolio-description">
+          <h2>Flash Tattoos</h2>
+          <p>
+            Metallic Flash Tattoos are all the rage right now! Kids and adults love our 200+ options that our personable and friendly technician will apply! All tattoos are temporary and can be removed with rubbing alchol or soap and water. 
+          </p>
+          <div class="text-center">
+            <a href="{% url 'home' %}#contact" class="btn btn-primary">Request Info</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+
+
+{% endblock content %}

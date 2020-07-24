@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+  
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Apparel</h2>
+          <ol>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'catalogue' %}">Catalogue</a></li>
+            <li><a href="{% url 'apparel' %}">Apparel</a></li>
+            <li>Live Ink</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container" data-aos="fade-up">
+        <div class="portfolio-details-container">
+
+          <div class="owl-carousel portfolio-details-carousel">
+            <img src="{% static 'img/services/liveink.jpg' %}" class="img-fluid" alt="">
+            <img src="{% static 'img/services/liveink2.jpg' %}" class="img-fluid" alt="">
+          </div>
+
+          <div class="portfolio-info">
+            <h3>Product Information</h3>
+            <ul>
+              <li><strong>Item</strong>: Live Ink</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="portfolio-description">
+          <h2>Live Ink</h2>
+          <p>
+            With a cutting-edge format, Live Ink can bring a new level of fun, creativity and engagement to your event. By incorporating your logos and designs onto promotional items and giveaways, we ensure a fun and interactive activity, all while increasing exposure. When you work with us, you don’t just work with a company that prints, you work with a company that is dedicated to the outcome and success of your event. Our skilled team and top of the line equipment can print, press and embroider on a wide range of promotional items and giveaways. There are thousands of options available. We can also travel anywhere, and do multiple events on the same day. Get in touch with us to learn more about how we can help make your next event, your best event! Live Ink is not just a printing company, we provide creative and memorable experiences.
+          </p>
+          <div class="text-center">
+            <a href="{% url 'home' %}#contact" class="btn btn-primary">Request Info</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+
+
+{% endblock content %}

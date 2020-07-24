@@ -73,6 +73,7 @@
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
+            <a href="{% url 'tailgate' %}">
             <div class="icon-box iconbox-yellow">
               <div class="icon">
                 <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
@@ -80,12 +81,14 @@
                 </svg>
                 <i class="fas fa-puzzle-piece"></i>
               </div>
-              <h4><a href="">Tailgate Style</a></h4>
+              <h4><a href="{% url 'tailgate' %}">Tailgate Style</a></h4>
               <p>LED Bean Bag Toss, Giant Jenga, and more! Fun for guests of all ages!</p>
             </div>
+          </a>
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
+          <a href="{% url 'apparel' %}"> 
             <div class="icon-box iconbox-red">
               <div class="icon">
                 <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
@@ -93,12 +96,14 @@
                 </svg>
                 <i class="fas fa-tshirt"></i>
               </div>
-              <h4><a href="">Apparel</a></h4>
+              <h4><a href="{% url 'apparel' %}">Apparel</a></h4>
               <p>Include theme oriented, interactive and customized take-home event gifts!</p>
             </div>
+            </a>
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
+            <a href="{% url 'fun_foods' %}"> 
             <div class="icon-box iconbox-teal">
               <div class="icon">
                 <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
@@ -106,9 +111,10 @@
                 </svg>
                 <i class="fas fa-ice-cream"></i>
               </div>
-              <h4><a href="">Fun Foods</a></h4>
+              <h4><a href="{% url 'fun_foods' %}">Fun Foods</a></h4>
               <p>Enhance your cocktail hour, dessert or BBQ with some fun foods!</p>
             </div>
+            </a>
           </div>
 
         </div>
@@ -128,7 +134,7 @@
           <div class="col-lg-3 col-md-4">
             <div class="icon-box">
               <img src="{% static 'img/slide/gamecube.png' %}" class="img-fluid featured-product-img">
-              <h3><a href="">Game Cube</a></h3>
+              <h3><a href="{% url 'game_cube' %}">Game Cube</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
@@ -140,26 +146,26 @@
           <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
             <div class="icon-box">
               <img src="{% static 'img/services/glitterbar1.jpg' %}" class="img-fluid featured-product-img">
-              <h3><a href="">Glitter Bar</a></h3>
+              <h3><a href="{% url 'glitter_bar' %}">Glitter Bar</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
             <div class="icon-box">
               <img src="{% static 'img/services/ledcornhole.jpg' %}" class="img-fluid featured-product-img">
-              <h3><a href="">LED Corn Hole</a></h3>
+              <h3><a href="{% url 'led_corn_hole' %}">LED Corn Hole</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box">
               <img src="{% static 'img/services/ringbooth.jpg' %}" class="img-fluid featured-product-img">
-              <h3><a href="{% url 'infinite_booth' %}">Ring Booth</a></h3>
+              <h3><a href="{% url 'ring_booth' %}">Ring Booth</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box">
               <img src="{% static 'img/services/streethoops1.jpg' %}" class="img-fluid featured-product-img">
               <div class='text-center'>
-              <h3><a href="">LED Street Hoops</a></h3>
+              <h3><a href="{% url 'led_street_hoops' %}">LED Street Hoops</a></h3>
             </div>
             </div>
           </div>
@@ -172,19 +178,19 @@
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box">
               <img src="{% static 'img/services/20playerfoos.jpg' %}" class="img-fluid featured-product-img">
-              <h3><a href="">20 Player Foosball</a></h3>
+              <h3><a href="{% url 'led_foosball' %}">20 Player Foosball</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box">
               <img src="{% static 'img/services/ledairhockey.jpg' %}" class="img-fluid featured-product-img">
-              <h3><a href="">LED Air Hockey</a></h3>
+              <h3><a href="{% url 'led_air_hockey' %}">LED Air Hockey</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box">
               <img src="{% static 'img/services/getinked.jpg' %}" class="img-fluid featured-product-img">
-              <h3><a href="">Get Inked</a></h3>
+              <h3><a href="{% url 'get_inked' %}">Get Inked</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
@@ -196,7 +202,7 @@
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box">
               <img src="{% static 'img/services/slimbooth.jpg' %}" class="img-fluid featured-product-img">
-              <h3><a href="">Slim Booth</a></h3>
+              <h3><a href="{% url 'slim_booth' %}">Slim Booth</a></h3>
             </div>
           </div>
         </div>

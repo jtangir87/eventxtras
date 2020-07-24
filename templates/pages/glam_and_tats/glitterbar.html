@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+  
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Glam & Tattoos</h2>
+          <ol>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'catalogue' %}">Catalogue</a></li>
+            <li><a href="{% url 'glam_and_tattoos' %}">Glam & Tattoos</a></li>
+            <li>The Glitter Bar</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container" data-aos="fade-up">
+        <div class="portfolio-details-container">
+
+          <div class="owl-carousel portfolio-details-carousel">
+            <img src="{% static 'img/services/glitterbar1.jpg' %}" class="img-fluid" alt="">
+            <img src="{% static 'img/services/glitterbar2.jpg' %}" class="img-fluid" alt="">
+            <!-- <img src="{% static 'img/services/infinite3.jpg' %}"class="img-fluid" alt=""> -->
+          </div>
+
+          <div class="portfolio-info">
+            <h3>Product Information</h3>
+            <ul>
+              <li><strong>Category</strong>: Glam</li>
+              <li><strong>Item</strong>: The Glitter Bar</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="portfolio-description">
+          <h2>The Glitter Bar</h2>
+          <p>
+            Glam up your girls! This boutique beauty salon comes with professional makeup artists that will glam up your girls with glitter hair, face jewels and glitter makeup
+          </p>
+          <div class="text-center">
+            <a href="{% url 'home' %}#contact" class="btn btn-primary">Request Info</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+
+
+{% endblock content %}

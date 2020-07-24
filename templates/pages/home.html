@@ -155,6 +155,7 @@
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
+            <a href="{% url 'tailgate' %}">
             <div class="icon-box iconbox-yellow">
               <div class="icon">
                 <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
@@ -162,12 +163,14 @@
                 </svg>
                 <i class="fas fa-puzzle-piece"></i>
               </div>
-              <h4><a href="">Tailgate Style</a></h4>
+              <h4><a href="{% url 'tailgate' %}">Tailgate Style</a></h4>
               <p>LED Bean Bag Toss, Giant Jenga, and more! Fun for guests of all ages!</p>
             </div>
+          </a>
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
+            <a href="{% url 'tailgate' %}">
             <div class="icon-box iconbox-red">
               <div class="icon">
                 <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
@@ -175,12 +178,14 @@
                 </svg>
                 <i class="fas fa-tshirt"></i>
               </div>
-              <h4><a href="">Apparel</a></h4>
+              <h4><a href="{% url 'tailgate' %}">Apparel</a></h4>
               <p>Include theme oriented, interactive and customized take-home event gifts!</p>
             </div>
+          </a>
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
+            <a href="{% url 'fun_foods' %}">
             <div class="icon-box iconbox-teal">
               <div class="icon">
                 <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
@@ -188,9 +193,10 @@
                 </svg>
                 <i class="fas fa-ice-cream"></i>
               </div>
-              <h4><a href="">Fun Foods</a></h4>
+              <h4><a href="{% url 'fun_foods' %}">Fun Foods</a></h4>
               <p>Enhance your cocktail hour, dessert or BBQ with some fun foods!</p>
             </div>
+          </a>
           </div>
 
         </div>
@@ -220,13 +226,13 @@
                 <div class="col-lg-4 info mt-4 mt-lg-0">
                   <i class="icofont-envelope"></i>
                   <h4>Email:</h4>
-                  <p>info@eventxtras.net</p>
+                  <p><a href="mailto:info@event-xtras.com">info@event-xtras.com</a></p>
                 </div>
 
                 <div class="col-lg-4 info mt-4 mt-lg-0">
                   <i class="icofont-phone"></i>
                   <h4>Call:</h4>
-                  <p>+1 5589 55488 51<br>+1 5589 22475 14</p>
+                  <p><a href="tel:2153029902">(215)302-9902</a></p>
                 </div>
               </div>
             </div>
@@ -237,7 +243,8 @@
 
         <div class="row mt-5 justify-content-center" data-aos="fade-up">
           <div class="col-lg-10">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="{% url 'contact_us' %}" method="post" role="form" class="php-email-form" id="contactForm">
+              {% csrf_token %}
               <div class="form-row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
@@ -329,4 +336,63 @@
     </section>End Our Clients Section -->
 
   </main><!-- End #main -->
+
+
+  <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" id="modal-contact-us-success">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Contact Us</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Your message has been sent. We will contact you ASAP!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 {% endblock content %}
+
+{% block footscript %}
+<script>
+  $(function () {
+
+/* Functions */
+
+var saveForm = function () {
+    var form = $(this);
+    $.ajax({
+        url: form.attr("action"),
+        data: form.serialize(),
+        type: form.attr("method"),
+        dataType: 'json',
+        success: function (data) {
+            if (data.form_is_valid) {
+                $("#modal-contact-us-success").modal("show");
+                $( '#contactForm' ).each(function(){
+                    this.reset();
+                });
+            }
+        }
+    });
+    return false;
+};
+
+
+/* Binding */
+
+$("#contactForm").on("submit", saveForm);
+
+
+});
+
+</script>
+
+  
+{% endblock footscript %}
