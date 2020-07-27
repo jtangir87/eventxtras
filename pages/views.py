@@ -23,7 +23,7 @@ def contact_us(request):
         }
         content = template.render(context)
         send_mail(
-            "GGRC Contact Us",
+            "Event Xtras Contact Us",
             content,
             "{}<{}>".format(name, email),
             ['info@event-xtras.com'],
